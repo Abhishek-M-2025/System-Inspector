@@ -120,3 +120,120 @@ system-inspector/
 ├── .gitignore                  # 🚫 Ignored Files
 ├── package.json
 └── README.md
+
+# ⚙️ Installation
+
+---
+
+## 📌 Requirements
+
+Before running this project, make sure you have the following installed:
+
+* ✅ **Node.js** (v18 or higher)
+* ✅ **npm**
+
+---
+
+## 📥 Setup
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/system-inspector.git
+cd system-inspector
+npm install
+```
+
+---
+
+# ▶️ Run Project
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+# 🔌 API Endpoints
+
+| Method | Endpoint         | Description           |
+| ------ | ---------------- | --------------------- |
+| GET    | `/api/system`    | System Information    |
+| GET    | `/api/env`       | Environment Variables |
+| GET    | `/api/health`    | System Health Score   |
+| GET    | `/api/files`     | File Manager          |
+| GET    | `/api/analytics` | Code Analytics        |
+| GET    | `/api/logs`      | Activity Logs         |
+
+---
+
+# 🧠 Architecture Flow
+
+```text
+Request
+   ↓
+Routes
+   ↓
+Controllers
+   ↓
+Services
+   ↓
+Utils
+   ↓
+Response
+```
+
+## 📂 Project Structure Breakdown
+
+* 📍 **Routes** → API endpoint mapping
+* 🎮 **Controllers** → Handle incoming requests
+* 🧠 **Services** → Core business logic
+* 🛠️ **Utils** → Helper and utility functions
+
+---
+
+# 🔒 Security
+
+* 📦 Workspace is fully sandboxed
+* 🔐 Sensitive environment variables are masked
+* 🚫 No external system access outside the allowed scope
+
+---
+
+# 📱 Cross Platform Support
+
+* ✔️ Windows
+* ✔️ Linux
+* ✔️ macOS
+
+---
+
+# 🚀 Future Improvements
+
+* 🔐 Authentication System
+* 🌐 Cloud Sync Dashboard
+* ⚡ Real-Time Monitoring using WebSockets
+* 🧠 AI-Based System Insights
+
+---
+
+# 👨‍💻 Author
+
+**Abhishek Mehra**
+
+Built with ❤️ for **⚡ Thunder Hackathon 3.0**
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# ⚡ Final Tagline
+
+> **Inspect. Manage. Analyze. Build Like a Pro.**
+
