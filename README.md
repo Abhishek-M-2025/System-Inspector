@@ -25,15 +25,15 @@
 ⚠️ For the complete hardware monitoring experience, it is recommended to run the application locally using Node.js.
 
 I have attached sample images and videos below, showing the application running on my local device: 👇
-
+``
 <img width="1917" height="910" alt="Image" src="https://github.com/user-attachments/assets/65b3eeab-9743-44e4-94fb-337bc858c9b1" />
----
+``
 <img width="1917" height="915" alt="Image" src="https://github.com/user-attachments/assets/a32ab9ec-07d9-4a38-8624-5deff20e1b7e" />
----
+``
 <img width="1917" height="902" alt="Image" src="https://github.com/user-attachments/assets/7c95fe5d-0d14-4980-974b-0aa7cc080ac1" />
----
+``
 https://github.com/user-attachments/assets/20b9d65a-f370-46f0-8e07-d44291dbfa63
-
+``
 ### It allows developers to:
 
 - 📊 Monitor system performance in real-time
