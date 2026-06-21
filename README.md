@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # System Inspector
 
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -284,3 +285,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 Built for JavaScript hackathons and developers who want a clean, framework-free system dashboard with real utility — no bloat, no placeholders, production-quality structure.
 
 **System Inspector** — *Inspect. Manage. Report.*
+=======
+# System-Inspector
+>>>>>>> 630085c6e78cb023b0f5e804918bd83481697a93
