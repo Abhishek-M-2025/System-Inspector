@@ -125,14 +125,14 @@ system-inspector/
 
  📌 Requirements:
 
-Before running this project, make sure you have the following installed:
+  Before running this project, make sure you have the following installed:
 
  ✅ Node.js (v18 or higher)
  ✅ npm
 
-## 📥 Setup
+ 📥 Setup
 
-Clone the repository and install dependencies:
+  Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/yourusername/system-inspector.git
