@@ -1,151 +1,122 @@
-⚡ THUNDER HACKATHON 3.0 — System Inspector 🖥️📊
+# ⚡ THUNDER HACKATHON 3.0 — System Inspector 🖥️📊
 
-A modern full-stack system monitoring & workspace management dashboard built with
-Vanilla JavaScript + Node.js + Express.js
+> A modern full-stack **system monitoring & workspace management dashboard** built with **Vanilla JavaScript, Node.js, and Express.js**.
 
-🌐 Live Demo
+---
 
-🚀 Deployed on Vercel
-👉 https://your-project-link.vercel.app
+## 🌐 Live Demo
 
-🚀 Overview
+🚀 **Deployed on Vercel**
 
-System Inspector is a developer-focused tool that provides real-time system insights and workspace control.
+👉 **https://your-project-link.vercel.app**
 
-It helps you:
+---
 
-📊 Monitor system performance in real-time
-🌐 Inspect environment variables securely
-📁 Manage files & folders (CRUD system)
-📈 Generate system analytics reports
-🧠 Analyze code structure & project stats
+## 🚀 Overview
 
-Built with a VS Code-inspired UI, it delivers a lightweight SaaS-like experience without frameworks like React or Tailwind.
+**System Inspector** is a developer-focused tool that provides real-time system insights and workspace management capabilities.
 
-✨ Features
-🖥️ System Monitoring
-OS, hostname, platform, architecture
-CPU details & live usage
-RAM usage (total, used, free)
-System uptime & boot time
-Disk usage analysis
-Network interface info
-Battery status (if available)
-🔐 Environment Variables Inspector
-View system environment variables
-Track important keys (PATH, NODE_ENV, etc.)
-Search & filter variables
-Mask sensitive data automatically 🔒
-📁 File Manager (CRUD System)
-Create / delete files & folders
-Rename files & directories
-Tree-based explorer 🌳
-Built-in code editor 💻
-Search workspace files
-📊 Code Analytics Engine
-Total files, folders, size stats
-Lines of code analysis
-Function & class detection
-File-level insights
-📈 System Health Score
-Score	Rating
-85–100	🟢 Excellent
-70–84	🟡 Good
-50–69	🟠 Average
-0–49	🔴 Poor
-📑 Reports & Activity Logs
-System reports generation
-JSON export 📤
-Activity tracking (file operations, edits, deletions)
-🛠️ Tech Stack
-Layer	Technology
-Frontend	HTML5, CSS3, Vanilla JavaScript
-Backend	Node.js, Express.js
-Core Modules	os, fs, path, child_process, dotenv, cors
-📂 Project Structure
+### It allows developers to:
+
+- 📊 Monitor system performance in real-time
+- 🌐 Inspect environment variables securely
+- 📁 Manage files & folders (CRUD operations)
+- 📈 Generate system analytics reports
+- 🧠 Analyze code structure & project statistics
+
+Built with a **VS Code-inspired dark UI**, it delivers a modern SaaS-like experience without relying on heavy frameworks like React or Tailwind.
+
+---
+
+## ✨ Features
+
+### 🖥️ System Monitoring
+
+- Operating system details
+- Hostname, platform & architecture
+- CPU details and live usage
+- RAM usage (total, used, free)
+- System uptime & boot time
+- Disk usage analysis
+- Network interface information
+- Battery status (if available)
+
+### 🔐 Environment Variables Inspector
+
+- View all environment variables
+- Track important keys (`PATH`, `NODE_ENV`, etc.)
+- Search and filter variables
+- Automatically mask sensitive data
+
+### 📁 File Manager (CRUD System)
+
+- Create and delete files/folders
+- Rename files and directories
+- Tree-based file explorer 🌳
+- Built-in code editor 💻
+- Search files within workspace
+
+### 📊 Code Analytics Engine
+
+- Total files and folders statistics
+- Project size analysis
+- Lines of code analysis
+- Function & class detection
+- File-level insights
+
+### 📈 System Health Score
+
+| Score | Rating |
+|--------|---------|
+| 85–100 | 🟢 Excellent |
+| 70–84 | 🟡 Good |
+| 50–69 | 🟠 Average |
+| 0–49 | 🔴 Poor |
+
+### 📑 Reports & Activity Logs
+
+- Generate system reports
+- Export reports as JSON 📤
+- Track file operations and activity logs
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|--------|------------|
+| **Frontend** | HTML5, CSS3, Vanilla JavaScript |
+| **Backend** | Node.js, Express.js |
+| **Core Modules** | os, fs, path, child_process, dotenv, cors |
+
+---
+
+## 📂 Project Structure
+
+```text
 system-inspector/
 │
-├── public/                 # 🌐 Frontend UI
-│   ├── css/                # 🎨 Styles
-│   ├── js/                 # ⚙️ Frontend logic
-│   │   ├── api/            # 🔌 API handlers
-│   │   ├── components/     # 🧩 UI components
-│   │   ├── pages/          # 📄 Application pages
-│   │   └── app.js          # 🚀 Entry point
+├── public/                     # 🌐 Frontend UI
+│   ├── css/                    # 🎨 Styles
+│   ├── js/                     # ⚙️ Frontend Logic
+│   │   ├── api/                # 🔌 API Handlers
+│   │   ├── components/         # 🧩 UI Components
+│   │   ├── pages/              # 📄 Application Pages
+│   │   └── app.js              # 🚀 Entry Point
 │   └── index.html
 │
-├── server/                # 🖥️ Backend (MVC architecture)
-│   ├── controllers/       # 🎮 Request handlers
-│   ├── routes/            # 🧭 API routes
-│   ├── services/          # 🧠 Business logic
-│   ├── utils/             # 🛠️ Helper functions
-│   ├── config/            # ⚙️ Configuration
-│   ├── data/              # 📊 Logs & reports
+├── server/                     # 🖥️ Backend (MVC)
+│   ├── controllers/            # 🎮 Request Handlers
+│   ├── routes/                 # 🧭 API Routes
+│   ├── services/               # 🧠 Business Logic
+│   ├── utils/                  # 🛠️ Helper Functions
+│   ├── config/                 # ⚙️ Configuration
+│   ├── data/                   # 📊 Logs & Reports
 │   ├── app.js
 │   └── server.js
 │
-├── workspace/             # 📁 Sandboxed file system
-├── .env.example          # 🔐 Environment config
-├── .gitignore            # 🚫 Ignored files
+├── workspace/                  # 📁 Sandboxed Workspace
+├── .env.example                # 🔐 Environment Variables
+├── .gitignore                  # 🚫 Ignored Files
 ├── package.json
 └── README.md
-⚙️ Installation (Local Setup)
-📌 Requirements
-Node.js (v18+)
-npm
-📥 Steps
-git clone https://github.com/yourusername/system-inspector.git
-cd system-inspector
-npm install
-▶️ Run Project
-npm run dev
-🌐 Deployment (Vercel 🚀)
-Steps:
-Push project to GitHub
-Go to https://vercel.com
-Click Import Project
-Select your repository
-Click Deploy
-
-✔ Your app will be live instantly 🚀
-
-🔌 API Endpoints
-Method	Endpoint	Description
-GET	/api/system	System information
-GET	/api/env	Environment variables
-GET	/api/health	System health score
-GET	/api/files	File manager
-GET	/api/analytics	Code analytics
-GET	/api/logs	Activity logs
-🧠 Architecture Flow
-Request → Routes → Controllers → Services → Utils → Response
-Breakdown:
-📍 Routes → API mapping
-🎮 Controllers → Request handling
-🧠 Services → Core logic
-🛠️ Utils → System helpers
-🔒 Security
-📦 Workspace sandboxed
-🔐 Sensitive environment variables masked
-🚫 No external system access outside scope
-📱 Cross Platform
-✔ Windows
-✔ Linux
-✔ macOS
-🚀 Future Improvements
-🔐 Authentication system
-🌐 Cloud sync dashboard
-⚡ Real-time monitoring (WebSockets)
-🧠 AI-based system insights
-👨‍💻 Author
-
-Abhishek Mehra
-Built for ⚡ Thunder Hackathon 3.0
-
-📜 License
-
-This project is licensed under the MIT License
-
-⚡ Final Tagline
-
-Inspect. Manage. Analyze. Build like a pro.
