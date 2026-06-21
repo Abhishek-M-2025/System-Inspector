@@ -8,7 +8,7 @@
 
 🚀 **Deployed on Vercel**
 
-👉 **https://your-project-link.vercel.app**
+👉 **[https://your-project-link.vercel.app](https://system-inspector-pearl.vercel.app/#dashboard)**
 
 ---
 
