@@ -120,7 +120,7 @@ system-inspector/
 ├── .gitignore                  # 🚫 Ignored Files
 ├── package.json
 └── README.md
-
+```
  ⚙️ Installation
 
  📌 Requirements:
