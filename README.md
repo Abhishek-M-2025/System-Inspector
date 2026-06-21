@@ -121,16 +121,16 @@ system-inspector/
 ├── package.json
 └── README.md
 ```
- ⚙️ Installation
+## ⚙️ Installation
 
- 📌 Requirements:
+### 📌 Requirements:
 
   Before running this project, make sure you have the following installed:
 
  ✅ Node.js (v18 or higher)
  ✅ npm
 
- 📥 Setup
+### 📥 Setup
 
   Clone the repository and install dependencies:
 
