@@ -128,6 +128,7 @@ system-inspector/
   Before running this project, make sure you have the following installed:
 
  ✅ Node.js (v18 or higher)
+ 
  ✅ npm
 
 ### 📥 Setup
