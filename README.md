@@ -121,6 +121,8 @@ system-inspector/
 ├── package.json
 └── README.md
 
+---
+
 # ⚙️ Installation
 
 ---
