@@ -1,290 +1,233 @@
-<<<<<<< HEAD
-# System Inspector
+# ⚡ THUNDER HACKATHON 3.0 — System Inspector 🖥️📊
 
-[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white)](https://expressjs.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
-**System Inspector** is a professional full-stack dashboard for monitoring system resources, inspecting environment variables, managing workspace files, and generating exportable reports — built with **Vanilla JavaScript** on the frontend and **Node.js + Express** on the backend.
-
-Designed with a VS Code–inspired dark theme, it delivers a modern SaaS experience without React, Tailwind, or Bootstrap.
-
-![System Inspector Dashboard](https://via.placeholder.com/1200x630/0F172A/3B82F6?text=System+Inspector)
+> A modern full-stack **system monitoring & workspace management dashboard** built with **Vanilla JavaScript, Node.js, and Express.js**.
 
 ---
 
-## Features
+## 🌐 Live Demo
 
-### System Monitoring
-- Computer name, hostname, OS, platform, and architecture
-- CPU model, cores, and live usage percentage
-- Memory (total, used, free, usage %)
-- System uptime, boot time, and timezone
-- Process monitoring (total, top, high memory, high CPU)
-- Disk storage (total, used, free, per-drive breakdown)
-- Network interfaces and connection status
-- Battery info (or "Battery Not Available" on desktop PCs)
+🚀 **Deployed on Vercel**
 
-### Environment Variables
-- View all runtime environment variables
-- Tracked keys: `PATH`, `HOME`, `TEMP`, `USERNAME`, `NODE_ENV`, `PORT`
-- Search and filter (All, Tracked, Sensitive, Other)
-- Automatic masking of sensitive values (passwords, tokens, secrets)
-
-### File Manager
-- Full CRUD on workspace files
-- Create / delete folders
-- Rename files and folders
-- Tree explorer with breadcrumb navigation
-- In-browser code editor with save
-- File search across workspace
-
-### Code Analytics
-- **Project:** total files, folders, JS/HTML/CSS counts, size distribution
-- **Per file:** lines, blank lines, comments, functions, classes, size, last modified
-
-### System Health Score
-Weighted score from CPU, RAM, disk, and battery (when available):
-
-| Score   | Rating    |
-|---------|-----------|
-| 85–100  | Excellent |
-| 70–84   | Good      |
-| 50–69   | Average   |
-| 0–49    | Poor      |
-
-### Reports & Activity Logs
-- Generate **System**, **Analytics**, and **Environment** reports
-- Export reports as JSON
-- Activity log (file create/update/delete, folder ops, report generation)
+👉 **https://your-project-link.vercel.app**
 
 ---
 
-## Tech Stack
+## 🚀 Overview
 
-| Layer    | Technology                          |
-|----------|-------------------------------------|
-| Frontend | HTML5, CSS3, Vanilla JavaScript     |
-| Backend  | Node.js, Express.js                 |
-| Modules  | `os`, `fs/promises`, `path`, `child_process`, `dotenv`, `cors` |
+**System Inspector** is a developer-focused tool that provides real-time system insights and workspace management capabilities.
 
-**Not used:** React, Vue, Tailwind, Bootstrap, jQuery
+### It allows developers to:
+
+- 📊 Monitor system performance in real-time
+- 🌐 Inspect environment variables securely
+- 📁 Manage files & folders (CRUD operations)
+- 📈 Generate system analytics reports
+- 🧠 Analyze code structure & project statistics
+
+Built with a **VS Code-inspired dark UI**, it delivers a modern SaaS-like experience without relying on heavy frameworks like React or Tailwind.
 
 ---
 
-## Project Structure
+## ✨ Features
 
-```
+### 🖥️ System Monitoring
+
+- Operating system details
+- Hostname, platform & architecture
+- CPU details and live usage
+- RAM usage (total, used, free)
+- System uptime & boot time
+- Disk usage analysis
+- Network interface information
+- Battery status (if available)
+
+### 🔐 Environment Variables Inspector
+
+- View all environment variables
+- Track important keys (`PATH`, `NODE_ENV`, etc.)
+- Search and filter variables
+- Automatically mask sensitive data
+
+### 📁 File Manager (CRUD System)
+
+- Create and delete files/folders
+- Rename files and directories
+- Tree-based file explorer 🌳
+- Built-in code editor 💻
+- Search files within workspace
+
+### 📊 Code Analytics Engine
+
+- Total files and folders statistics
+- Project size analysis
+- Lines of code analysis
+- Function & class detection
+- File-level insights
+
+### 📈 System Health Score
+
+| Score | Rating |
+|--------|---------|
+| 85–100 | 🟢 Excellent |
+| 70–84 | 🟡 Good |
+| 50–69 | 🟠 Average |
+| 0–49 | 🔴 Poor |
+
+### 📑 Reports & Activity Logs
+
+- Generate system reports
+- Export reports as JSON 📤
+- Track file operations and activity logs
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|--------|------------|
+| **Frontend** | HTML5, CSS3, Vanilla JavaScript |
+| **Backend** | Node.js, Express.js |
+| **Core Modules** | os, fs, path, child_process, dotenv, cors |
+
+---
+
+## 📂 Project Structure
+
+```text
 system-inspector/
-├── public/                  # Frontend (static assets)
-│   ├── css/
-│   │   ├── variables.css    # Design tokens
-│   │   ├── base.css         # Reset & globals
-│   │   ├── layout.css       # App shell layout
-│   │   ├── components.css   # UI components
-│   │   └── pages.css        # Page-specific styles
-│   ├── js/
-│   │   ├── api.js           # API client
-│   │   ├── utils.js         # Shared utilities
-│   │   ├── app.js           # SPA router & init
-│   │   ├── components/      # Navbar, sidebar, modal, toast
-│   │   └── pages/           # Dashboard, system, env, files, etc.
+│
+├── public/                     # 🌐 Frontend UI
+│   ├── css/                    # 🎨 Styles
+│   ├── js/                     # ⚙️ Frontend Logic
+│   │   ├── api/                # 🔌 API Handlers
+│   │   ├── components/         # 🧩 UI Components
+│   │   ├── pages/              # 📄 Application Pages
+│   │   └── app.js              # 🚀 Entry Point
 │   └── index.html
-├── server/
-│   ├── server.js            # Entry point
-│   ├── app.js               # Express configuration
-│   ├── config/              # Environment config
-│   ├── controllers/         # Request handlers (MVC)
-│   ├── routes/              # API route definitions
-│   ├── services/            # Business logic
-│   ├── utils/               # Helpers & analyzers
-│   └── data/                # Activity logs (JSON)
-├── workspace/               # File manager root (sandboxed)
+│
+├── server/                     # 🖥️ Backend (MVC)
+│   ├── controllers/            # 🎮 Request Handlers
+│   ├── routes/                 # 🧭 API Routes
+│   ├── services/               # 🧠 Business Logic
+│   ├── utils/                  # 🛠️ Helper Functions
+│   ├── config/                 # ⚙️ Configuration
+│   ├── data/                   # 📊 Logs & Reports
+│   ├── app.js
+│   └── server.js
+│
+├── workspace/                  # 📁 Sandboxed Workspace
+├── .env.example                # 🔐 Environment Variables
+├── .gitignore                  # 🚫 Ignored Files
 ├── package.json
-├── .env.example
 └── README.md
 ```
+## ⚙️ Installation
 
----
+### 📌 Requirements:
 
-## Getting Started
+  Before running this project, make sure you have the following installed:
 
-### Prerequisites
+ ✅ Node.js (v18 or higher)
+ 
+ ✅ npm
 
-- [Node.js](https://nodejs.org/) **18.0.0** or higher
-- npm (included with Node.js)
+### 📥 Setup
 
-### Installation
+  Clone the repository and install dependencies:
 
 ```bash
-# Clone the repository
 git clone https://github.com/yourusername/system-inspector.git
 cd system-inspector
-
-# Install dependencies
 npm install
-
-# Copy environment config (optional — defaults work out of the box)
-cp .env.example .env
 ```
 
-### Run
+# ▶️ Run Project
 
-```bash
-npm start
-```
-
-Open **http://localhost:3000** in your browser.
-
-Development mode with auto-restart:
+Start the development server:
 
 ```bash
 npm run dev
 ```
+---
+
+# 🔌 API Endpoints
+
+| Method | Endpoint         | Description           |
+| ------ | ---------------- | --------------------- |
+| GET    | `/api/system`    | System Information    |
+| GET    | `/api/env`       | Environment Variables |
+| GET    | `/api/health`    | System Health Score   |
+| GET    | `/api/files`     | File Manager          |
+| GET    | `/api/analytics` | Code Analytics        |
+| GET    | `/api/logs`      | Activity Logs         |
 
 ---
 
-## Configuration
+# 🧠 Architecture Flow
 
-Create a `.env` file in the project root:
-
-```env
-PORT=3000
-NODE_ENV=development
-WORKSPACE_PATH=./workspace
+```text
+Request
+   ↓
+Routes
+   ↓
+Controllers
+   ↓
+Services
+   ↓
+Utils
+   ↓
+Response
 ```
 
-| Variable         | Default       | Description                          |
-|------------------|---------------|--------------------------------------|
-| `PORT`           | `3000`        | HTTP server port                     |
-| `NODE_ENV`       | `development` | Runtime environment                  |
-| `WORKSPACE_PATH` | `./workspace` | Sandboxed directory for file manager |
+## 📂 Project Structure Breakdown
+
+* 📍 **Routes** → API endpoint mapping
+* 🎮 **Controllers** → Handle incoming requests
+* 🧠 **Services** → Core business logic
+* 🛠️ **Utils** → Helper and utility functions
 
 ---
 
-## API Reference
+# 🔒 Security
 
-Base URL: `http://localhost:3000/api`
-
-| Method | Endpoint                    | Description                |
-|--------|-----------------------------|----------------------------|
-| GET    | `/status`                   | API health check           |
-| GET    | `/system`                   | Full system information    |
-| GET    | `/env`                      | Environment variables      |
-| GET    | `/health`                   | System health score        |
-| GET    | `/logs`                     | Activity logs              |
-| GET    | `/reports/dashboard`        | Dashboard aggregate data   |
-| GET    | `/reports/:type`            | Generate report (`system`, `analytics`, `environment`) |
-| GET    | `/files`                    | List directory             |
-| GET    | `/files/tree`               | File tree                  |
-| GET    | `/files/search?q=`          | Search files               |
-| GET    | `/files/read/:path`         | Read file                  |
-| POST   | `/files/file`               | Create file                |
-| PUT    | `/files/file/:path`         | Update file                |
-| DELETE | `/files/file/:path`         | Delete file                |
-| PATCH  | `/files/rename/:path`       | Rename file/folder         |
-| POST   | `/files/folder`             | Create folder              |
-| DELETE | `/files/folder/:path`       | Delete folder              |
-| GET    | `/analytics`                | Analytics overview         |
-| GET    | `/analytics/project`        | Project statistics         |
-| GET    | `/analytics/file/:path`     | Single file analytics      |
-
-### Example
-
-```bash
-curl http://localhost:3000/api/system
-curl http://localhost:3000/api/health
-curl "http://localhost:3000/api/env?filter=tracked&mask=true"
-```
+* 📦 Workspace is fully sandboxed
+* 🔐 Sensitive environment variables are masked
+* 🚫 No external system access outside the allowed scope
 
 ---
 
-## UI Pages
+# 📱 Cross Platform Support
 
-1. **Dashboard** — Overview, health score, quick stats, recent activity  
-2. **System Info** — Hardware, processes, disk, network, battery  
-3. **Environment Variables** — Search, filter, mask sensitive values  
-4. **File Manager** — Tree explorer, editor, CRUD operations  
-5. **Analytics** — Project and file-level code metrics  
-6. **Reports** — Generate and export JSON reports  
-7. **Settings** — Preferences and app information  
+* ✔️ Windows
+* ✔️ Linux
+* ✔️ macOS
 
 ---
 
-## Architecture
+# 🚀 Future Improvements
 
-The backend follows **MVC**:
-
-```
-Request → Route → Controller → Service → Response
-                      ↓
-                 Activity Logger
-```
-
-- **Routes** — HTTP mapping only  
-- **Controllers** — Parse requests, send responses, error forwarding  
-- **Services** — System calls, file I/O, analytics, report generation  
-- **Utils** — Formatters, file analyzer, activity logger  
-
-The frontend is a lightweight **SPA** using hash routing (`#dashboard`, `#files`, etc.) with ES modules.
+* 🔐 Authentication System
+* 🌐 Cloud Sync Dashboard
+* ⚡ Real-Time Monitoring using WebSockets
+* 🧠 AI-Based System Insights
 
 ---
 
-## Security Notes
+# 👨‍💻 Author
 
-This project is a **local development / hackathon tool**, not production middleware.
+**Abhishek Mehra**
 
-- File operations are **sandboxed** to `WORKSPACE_PATH` — paths outside the workspace are rejected  
-- `child_process` is used only for read-only system queries (process list, disk, battery)  
-- Sensitive environment variables are masked in the UI and reports  
-- Do not expose this application to the public internet without authentication  
+Built with ❤️ for **⚡ Thunder Hackathon 3.0**
 
 ---
 
-## Cross-Platform Support
+# 📜 License
 
-| Feature   | Windows | Linux | macOS |
-|-----------|---------|-------|-------|
-| System    | ✅      | ✅    | ✅    |
-| Processes | ✅      | ✅    | ✅    |
-| Disk      | ✅      | ✅    | ✅    |
-| Battery   | ✅      | ✅    | ✅    |
-| Network   | ✅      | ✅    | ✅    |
-
-On desktop PCs without a battery, the dashboard displays **"Battery Not Available"**.
+This project is licensed under the **MIT License**.
 
 ---
 
-## Scripts
+# ⚡ Final Tagline
 
-| Command       | Description              |
-|---------------|--------------------------|
-| `npm start`   | Start production server  |
-| `npm run dev` | Start with `--watch`     |
+> **Inspect. Manage. Analyze. Build Like a Pro.**
 
----
-
-## Contributing
-
-1. Fork the repository  
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)  
-3. Commit your changes (`git commit -m 'Add amazing feature'`)  
-4. Push to the branch (`git push origin feature/amazing-feature`)  
-5. Open a Pull Request  
-
----
-
-## License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-Built for JavaScript hackathons and developers who want a clean, framework-free system dashboard with real utility — no bloat, no placeholders, production-quality structure.
-
-**System Inspector** — *Inspect. Manage. Report.*
-=======
-# System-Inspector
->>>>>>> 630085c6e78cb023b0f5e804918bd83481697a93
