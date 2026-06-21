@@ -123,7 +123,7 @@ system-inspector/
 
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation
 
 ---
 
