@@ -1,0 +1,22 @@
+:root {
+  --demo-accent: #3B82F6;
+  --demo-bg: #0F172A;
+  --demo-text: #F8FAFC;
+}
+
+.header {
+  padding: 2rem;
+  background: var(--demo-bg);
+  color: var(--demo-text);
+}
+
+.subtitle {
+  color: #94A3B8;
+  margin-top: 0.5rem;
+}
+
+.content {
+  padding: 2rem;
+}
+
+/* Demo stylesheet for analytics testing */
