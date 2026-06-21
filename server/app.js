@@ -10,8 +10,27 @@ const analyticsRoutes = require('./routes/analyticsRoutes');
 const healthRoutes = require('./routes/healthRoutes');
 const reportRoutes = require('./routes/reportRoutes');
 const logsRoutes = require('./routes/logsRoutes');
+const bootstrap = require('./bootstrap');
 
 const app = express();
+
+let bootstrapPromise = null;
+
+function ensureBootstrap() {
+  if (!bootstrapPromise) {
+    bootstrapPromise = bootstrap();
+  }
+  return bootstrapPromise;
+}
+
+app.use(async (req, res, next) => {
+  try {
+    await ensureBootstrap();
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
 
 app.use(cors());
 app.use(express.json({ limit: '2mb' }));

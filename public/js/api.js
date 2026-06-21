@@ -1,5 +1,25 @@
 const API_BASE = '/api';
 
+async function parseJsonResponse(response) {
+  const contentType = response.headers.get('content-type') || '';
+  const text = await response.text();
+
+  if (!contentType.includes('application/json')) {
+    const preview = text.trim().slice(0, 80);
+    throw new Error(
+      preview.startsWith('The page') || preview.startsWith('<!DOCTYPE') || preview.startsWith('<html')
+        ? 'API route not found. Redeploy with serverless API configuration.'
+        : preview || `Request failed: ${response.status}`
+    );
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch {
+    throw new Error('Server returned invalid JSON.');
+  }
+}
+
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
   const config = {
@@ -12,7 +32,7 @@ async function request(endpoint, options = {}) {
   }
 
   const response = await fetch(url, config);
-  const data = await response.json();
+  const data = await parseJsonResponse(response);
 
   if (!response.ok || !data.success) {
     throw new Error(data.error || `Request failed: ${response.status}`);
@@ -23,7 +43,7 @@ async function request(endpoint, options = {}) {
 
 async function requestStatus() {
   const response = await fetch(`${API_BASE}/status`);
-  const data = await response.json();
+  const data = await parseJsonResponse(response);
 
   if (!response.ok || !data.success) {
     throw new Error(data.error || `Request failed: ${response.status}`);
